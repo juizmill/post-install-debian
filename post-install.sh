@@ -27,7 +27,8 @@ sudo unzip Fira_Code_v4.zip
 sudo cp ttf/*.ttf /usr/share/fonts
 
 echo -e "${RED}>>> Install default <<<${NC}"
-sudo apt install vim bash-completion snapd libavcodec-extra filezilla gnome-tweak-tool gnome-backgrounds zsh -y
+sudo apt install git vim bash-completion snapd libavcodec-extra filezilla gnome-tweak-tool gnome-backgrounds zsh -y
+sudo apt autoremove
 
 echo -e "${RED}>>> Install Development Tool <<<${NC}"
 sudo snap install sublime-text --classic
