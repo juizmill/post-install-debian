@@ -27,7 +27,7 @@ sudo unzip Fira_Code_v4.zip
 sudo cp ttf/*.ttf /usr/share/fonts
 
 echo -e "${RED}>>> Install default <<<${NC}"
-sudo apt install git vim bash-completion snapd libavcodec-extra filezilla gnome-tweak-tool gnome-backgrounds zsh -y
+sudo apt install git vim bash-completion snapd libavcodec-extra filezilla gnome-tweak-tool gnome-backgrounds dconf zsh screenfetch -y
 sudo apt autoremove
 
 echo -e "${RED}>>> Gnome cedilla fix <<<${NC}"
@@ -56,13 +56,13 @@ git clone https://github.com/EliverLara/Sweet-folders.git
 sudo cp -r Sweet-folders/* /usr/share/icons/
 
 # Change GTK-Theme
-sudo gsettings set org.gnome.desktop.interface gtk-theme "Sweet-Dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Sweet-Dark"
 
 # Change Window-Theme
-sudo gsettings set org.gnome.desktop.wm.preferences theme "Sweet-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Sweet-Dark"
 
 # Change Icon-Theme:
-sudo gsettings set org.gnome.desktop.interface icon-theme 'Sweet-Rainbow'
+gsettings set org.gnome.desktop.interface icon-theme 'Sweet-Rainbow'
 
 echo -e "${RED}>>> Install Docker <<<${NC}"
 sudo apt remove docker docker-engine docker.io containerd runc -y
@@ -159,3 +159,7 @@ alias php74="sudo update-alternatives --set php /usr/bin/php7.4"
 alias php73="sudo update-alternatives --set php /usr/bin/php7.3"
 alias php72="sudo update-alternatives --set php /usr/bin/php7.2"
 EOF
+
+cd $HOME
+
+screenfetch
