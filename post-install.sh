@@ -162,4 +162,6 @@ EOF
 
 cd $HOME
 
+clear
+
 screenfetch
