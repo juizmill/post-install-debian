@@ -30,6 +30,16 @@ echo -e "${RED}>>> Install default <<<${NC}"
 sudo apt install git vim bash-completion snapd libavcodec-extra filezilla gnome-tweak-tool gnome-backgrounds zsh -y
 sudo apt autoremove
 
+echo -e "${RED}>>> Gnome cedilla fix <<<${NC}"
+wget -q https://raw.githubusercontent.com/marcopaganini/gnome-cedilla-fix/master/fix-cedilla -O fix-cedilla
+sudo chmod 755 fix-cedilla
+./fix-cedilla
+
+echo -e "${RED}>>> Gnome dash fix <<<${NC}"
+wget https://raw.githubusercontent.com/BenJetson/gnome-dash-fix/master/appfixer.sh
+sudo chmod +x appfixer.sh
+./appfixer.sh
+
 echo -e "${RED}>>> Install Development Tool <<<${NC}"
 sudo snap install sublime-text --classic
 sudo snap install code --classic
